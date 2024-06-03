@@ -48,13 +48,22 @@ public class Cat {
         String[] abc = new String[]{"Призрак", "Нимерия", "Лето", "Леди" , "Лохматик"};
         for (String catNameForeach : abc) {
             Random random = new Random();
-            Cat catForeach = new Cat("", 0);
-            catForeach.setName(catNameForeach);
-            catForeach.setAge(random.nextInt(28) + 1);
+                        int randomCatNameIndex = random.nextInt(abc.length);
+            String randomCatName = abc[randomCatNameIndex];
+            String remainRandomCatNameIndex = abc[randomCatNameIndex];
+            abc[randomCatNameIndex] = abc[abc.length - 1];
+            abc[abc.length - 1] = remainRandomCatNameIndex;
+            Cat catForeach = new Cat(randomCatName, random.nextInt(29) + 1);
             System.out.println("Имя котика: " + catForeach.getName() + ", Возраст котика: " + catForeach.getAge());
         }
         System.out.println("Вывели 5 раз имя и возраст котика c помощью массива");
     }
+
+
+
+
+
+
 
     public Cat(String name, int age) {
         this.name = name;
