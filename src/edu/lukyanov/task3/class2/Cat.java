@@ -59,12 +59,6 @@ public class Cat {
         System.out.println("Вывели 5 раз имя и возраст котика c помощью массива");
     }
 
-
-
-
-
-
-
     public Cat(String name, int age) {
         this.name = name;
         this.age = age;
