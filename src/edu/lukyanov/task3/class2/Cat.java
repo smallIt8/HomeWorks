@@ -45,10 +45,10 @@ public class Cat {
     }
 
     public static void startForeach() {
-        String[] abc = new String[]{"Призрак", "Нимерия", "Лето", "Леди" , "Лохматик"};
+        String[] abc = new String[]{"Призрак", "Нимерия", "Лето", "Леди", "Лохматик"};
         for (String catNameForeach : abc) {
             Random random = new Random();
-                        int randomCatNameIndex = random.nextInt(abc.length);
+            int randomCatNameIndex = random.nextInt(abc.length);
             String randomCatName = abc[randomCatNameIndex];
             String remainRandomCatNameIndex = abc[randomCatNameIndex];
             abc[randomCatNameIndex] = abc[abc.length - 1];
