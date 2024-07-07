@@ -9,19 +9,6 @@ public class Phone {
         createPhonesAndPrint();
     }
 
-    public Phone() {
-    }
-
-    public Phone(String number, String model) {
-        this.number = number;
-        this.model = model;
-    }
-
-    public Phone(String number, String model, int weight) {
-        this(number, model);
-        this.weight = weight;
-    }
-
     public static void createPhonesAndPrint() {
         Phone phone1 = new Phone("+375251112233", "Xiaomi Mi 13 Ultra", 189);
         Phone phone2 = new Phone("+375294445566", "Samsung Galaxy S22 Ultra", 211);
@@ -67,6 +54,19 @@ public class Phone {
         for (String phoneNumber : phoneNumbers) {
             System.out.println(phoneNumber);
         }
+    }
+
+    public Phone() {
+    }
+
+    public Phone(String number, String model) {
+        this.number = number;
+        this.model = model;
+    }
+
+    public Phone(String number, String model, int weight) {
+        this(number, model);
+        this.weight = weight;
     }
 
     public void setNumber(String number) {

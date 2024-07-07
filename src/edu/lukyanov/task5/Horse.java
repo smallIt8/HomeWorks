@@ -3,11 +3,6 @@ package src.edu.lukyanov.task5;
 public class Horse extends Animal {
     private String speedMovement;
 
-    public Horse(String food, String location, String speedMovement) {
-        super(food, location);
-        this.speedMovement = speedMovement;
-    }
-
     @Override
     public void makeNoise() {
         System.out.println("Лошадь ржет");
@@ -17,6 +12,11 @@ public class Horse extends Animal {
     public void eat() {
         setFood("Сено");
         System.out.println("Лошадь ест " + getFood());
+    }
+
+    public Horse(String food, String location, String speedMovement) {
+        super(food, location);
+        this.speedMovement = speedMovement;
     }
 
     public String getSpeedMovement() {

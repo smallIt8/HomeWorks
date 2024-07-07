@@ -4,11 +4,6 @@ public class RobotFactory implements Factory<Robot> {
     private HeadFactory headFactory;
     private BodyFactory bodyFactory;
 
-    public RobotFactory(HeadFactory headFactory, BodyFactory bodyFactory) {
-        this.headFactory = headFactory;
-        this.bodyFactory = bodyFactory;
-    }
-
     @Override
     public Robot[] assemblyPart() {
         int headCount = RobotHead.values().length;
@@ -26,5 +21,10 @@ public class RobotFactory implements Factory<Robot> {
             }
         }
         return robots;
+    }
+
+    public RobotFactory(HeadFactory headFactory, BodyFactory bodyFactory) {
+        this.headFactory = headFactory;
+        this.bodyFactory = bodyFactory;
     }
 }

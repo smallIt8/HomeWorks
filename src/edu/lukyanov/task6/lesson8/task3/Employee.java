@@ -11,20 +11,20 @@ public class Employee {
         Report.generateReport(persons);
     }
 
-    public Employee() {
-    }
-
-    public Employee(String fullName, double salary) {
-        this.fullName = fullName;
-        this.salary = salary;
-    }
-
     public void createEmployee(){
         persons = new Employee[]{
                 new Employee("Сидоров А.В.",1050.54),
                 new Employee("Петров П.С.", 1537.12),
                 new Employee("Васичкин Л.Е", 1234.75)
         };
+    }
+
+    public Employee() {
+    }
+
+    public Employee(String fullName, double salary) {
+        this.fullName = fullName;
+        this.salary = salary;
     }
 
     public String getFullName() {

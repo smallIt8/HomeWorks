@@ -9,14 +9,9 @@ public class Robot {
     private RobotFactory robotFactory= new RobotFactory(headFactory, bodyFactory);
     private Robot[] robots;
 
-    public Robot() {
-
-    }
-
-    public Robot(String name, RobotHead head, RobotBody body) {
-        this.name = name;
-        this.head = head;
-        this.body = body;
+    public void start() {
+        robots = robotFactory.assemblyPart();
+        print();
     }
 
     @Override
@@ -27,14 +22,18 @@ public class Robot {
                 body.getName();
     }
 
-    public void start() {
-        robots = robotFactory.assemblyPart();
-        print();
-    }
-
     private void print() {
         for (Robot robot : robots) {
             System.out.println(robot);
         }
+    }
+
+    public Robot() {
+    }
+
+    public Robot(String name, RobotHead head, RobotBody body) {
+        this.name = name;
+        this.head = head;
+        this.body = body;
     }
 }

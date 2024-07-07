@@ -3,11 +3,6 @@ package src.edu.lukyanov.task5;
 public class Dog extends Animal {
     private String command;
 
-    public Dog(String food, String location, String command) {
-        super(food, location);
-        this.command = command;
-    }
-
     @Override
     public void makeNoise() {
         System.out.println("Собака гавкает");
@@ -16,6 +11,11 @@ public class Dog extends Animal {
     @Override
     public void eat() {
         System.out.println("Собака ест " + getFood());
+    }
+
+    public Dog(String food, String location, String command) {
+        super(food, location);
+        this.command = command;
     }
 
     public String getCommand() {
